@@ -80,7 +80,7 @@ func PrintStats(freq time.Duration) {
 }
 
 func Stats() string {
-	return fmt.Sprintf(`{ "now": "%s", success": %d, "connect_error": %d, "copy_error": %d, "total": %d }`,
+	return fmt.Sprintf(`{ "now": "%s", "success": %d, "connect_error": %d, "copy_error": %d, "total": %d }`,
 		time.Now().Format(time.RFC3339),
 		atomic.LoadUint64(Success),
 		atomic.LoadUint64(ConnectError),
